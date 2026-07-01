@@ -1,7 +1,7 @@
 # Permutation Feature Importance — Diabetes Dataset
 
-Module 3 exercise: explaining a Random Forest model using Permutation
-Feature Importance (PFI) on scikit-learn's diabetes dataset.
+A model-agnostic explainability technique applied to a Random Forest model
+predicting diabetes progression, using scikit-learn's diabetes dataset.
 
 ## What it does
 1. Trains a Random Forest Regressor on the diabetes dataset
@@ -9,6 +9,13 @@ Feature Importance (PFI) on scikit-learn's diabetes dataset.
 3. Shuffles each feature's values in the test set and re-measures performance
 4. Ranks features by how much shuffling degrades performance
 5. Plots the results as a horizontal bar chart
+
+## Why Permutation Feature Importance?
+Unlike coefficient-based explanations (e.g. linear regression), Permutation
+Feature Importance (PFI) works with any model — including "black box" models
+like Random Forests or neural networks — by directly measuring how much a
+model's performance depends on each feature, without needing access to the
+model's internal structure.
 
 ## Setup
 
